@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d("MAIN", "OH NO, there was a JSON exception. This clearly needs a try block!");
         }
 
-        AndroidNetworking.post("http://lights.mcxa.org/update")
+        AndroidNetworking.post("http://[2606:a000:1127:4082:ba27:ebff:fe59:23c]/update")
                 .addJSONObjectBody(requestBody)
                 .build().getAsOkHttpResponse(new OkHttpResponseListener() {
             @Override
