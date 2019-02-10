@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,7 +7,7 @@
     tools:context="org.mcxa.lightingcontrol.MainActivity">
 
     <TextView
-        android:id="@+id/lchltv"
+        android:id="@+id/office_lamp_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Office Lamp"
@@ -17,27 +17,27 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:theme="@style/PrimaryButton"
-        android:id="@+id/lchlon"
+        android:id="@+id/office_lamp_on"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="On"
-        app:layout_constraintTop_toBottomOf="@id/lchltv"
+        app:layout_constraintTop_toBottomOf="@id/office_lamp_text"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginStart="10dp"/>
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/lchloff"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/office_lamp_off"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Off"
-        app:layout_constraintTop_toBottomOf="@id/lchltv"
-        app:layout_constraintLeft_toRightOf="@id/lchlon"
+        app:layout_constraintTop_toBottomOf="@id/office_lamp_text"
+        app:layout_constraintLeft_toRightOf="@id/office_lamp_on"
         android:layout_marginStart="10dp"/>
 
     <TextView
-        android:id="@+id/kchltv"
+        android:id="@+id/office_lights_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -45,29 +45,29 @@
         android:text="Office Christmas Lights"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lchlon" />
+        app:layout_constraintTop_toBottomOf="@+id/office_lamp_on" />
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:theme="@style/PrimaryButton"
-        android:id="@+id/kchlon"
+        android:id="@+id/office_lights_on"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="On"
-        app:layout_constraintTop_toBottomOf="@id/kchltv"
+        app:layout_constraintTop_toBottomOf="@id/office_lights_text"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginStart="10dp"/>
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/kchloff"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/office_lights_off"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Off"
-        app:layout_constraintTop_toBottomOf="@id/kchltv"
-        app:layout_constraintLeft_toRightOf="@id/kchlon"
+        app:layout_constraintTop_toBottomOf="@id/office_lights_text"
+        app:layout_constraintLeft_toRightOf="@id/office_lights_on"
         android:layout_marginStart="10dp"/>
 
     <TextView
-        android:id="@+id/lvltv"
+        android:id="@+id/living_room_lamp_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -75,29 +75,29 @@
         android:text="Living Room Lamp"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/kchlon" />
+        app:layout_constraintTop_toBottomOf="@+id/office_lights_on" />
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:theme="@style/PrimaryButton"
-        android:id="@+id/lvlon"
+        android:id="@+id/living_room_lamp_on"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="On"
-        app:layout_constraintTop_toBottomOf="@id/lvltv"
+        app:layout_constraintTop_toBottomOf="@id/living_room_lamp_text"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginStart="10dp"/>
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/lvloff"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/living_room_lamp_off"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Off"
-        app:layout_constraintTop_toBottomOf="@id/lvltv"
-        app:layout_constraintLeft_toRightOf="@id/lvlon"
+        app:layout_constraintTop_toBottomOf="@id/living_room_lamp_text"
+        app:layout_constraintLeft_toRightOf="@id/living_room_lamp_on"
         android:layout_marginStart="10dp"/>
 
     <TextView
-        android:id="@+id/bchltv"
+        android:id="@+id/humidifier_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -105,29 +105,29 @@
         android:text="Bedroom Humidifier"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lvlon" />
+        app:layout_constraintTop_toBottomOf="@+id/living_room_lamp_on" />
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:theme="@style/PrimaryButton"
-        android:id="@+id/bchlon"
+        android:id="@+id/humidifier_on"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="On"
-        app:layout_constraintTop_toBottomOf="@id/bchltv"
+        app:layout_constraintTop_toBottomOf="@id/humidifier_text"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginStart="10dp"/>
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/bchloff"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/humidifier_off"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Off"
-        app:layout_constraintTop_toBottomOf="@id/bchltv"
-        app:layout_constraintLeft_toRightOf="@id/bchlon"
+        app:layout_constraintTop_toBottomOf="@id/humidifier_text"
+        app:layout_constraintLeft_toRightOf="@id/humidifier_on"
         android:layout_marginStart="10dp"/>
 
     <TextView
-        android:id="@+id/bltv"
+        android:id="@+id/bedroom_lamp_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -135,24 +135,65 @@
         android:text="Bedroom Lamp"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bchlon" />
+        app:layout_constraintTop_toBottomOf="@+id/humidifier_on" />
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:theme="@style/PrimaryButton"
-        android:id="@+id/blon"
+        android:id="@+id/bedroom_lamp_on"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="On"
-        app:layout_constraintTop_toBottomOf="@id/bltv"
+        app:layout_constraintTop_toBottomOf="@id/bedroom_lamp_text"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginStart="10dp"/>
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/bloff"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bedroom_lamp_off"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Off"
-        app:layout_constraintTop_toBottomOf="@id/bltv"
-        app:layout_constraintLeft_toRightOf="@id/blon"
+        app:layout_constraintTop_toBottomOf="@id/bedroom_lamp_text"
+        app:layout_constraintLeft_toRightOf="@id/bedroom_lamp_on"
         android:layout_marginStart="10dp"/>
-</android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/front_door_lock_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:text="Front Door Lock"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bedroom_lamp_on" />
+
+    <TextView
+        android:id="@+id/front_door_lock_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:text="Status: "
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/front_door_lock_text" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:theme="@style/PrimaryButton"
+        android:id="@+id/front_door_lock_lock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lock"
+        app:layout_constraintTop_toBottomOf="@id/front_door_lock_status"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="10dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/front_door_lock_unlock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unlock"
+        app:layout_constraintTop_toBottomOf="@id/front_door_lock_status"
+        app:layout_constraintLeft_toRightOf="@id/front_door_lock_lock"
+        android:layout_marginStart="10dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
