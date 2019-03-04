@@ -60,8 +60,13 @@ class MainActivity : AppCompatActivity() {
         front_door_lock_lock.setOnClickListener {
             callService("lock.kwikset_unknown_type_0003_id_0446_locked",
                     "lock","lock") {
-                val lockStatus = (it?.get("attributes") as? JSONObject)?.get("lock_status")
-                front_door_lock_status.text = "Lock Status: ${lockStatus}"
+                val lockStatus = (it?.get("attributes") as? JSONObject)?.get("lock_status").toString()
+                // replace the stupidly long manually locked by cylinder turn or ... message
+                if (lockStatus.contains("Manually Locked")) {
+                    front_door_lock_status.text = "Lock Status: Manually Locked"
+                } else {
+                    front_door_lock_status.text = "Lock Status: ${lockStatus}"
+                }
             }
         }
         front_door_lock_unlock.setOnClickListener {
@@ -73,8 +78,13 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
 
         getStatus("lock.kwikset_unknown_type_0003_id_0446_locked") {
-            val lockStatus = (it?.get("attributes") as? JSONObject)?.get("lock_status")
-            front_door_lock_status.text = "Lock Status: ${lockStatus}"
+            val lockStatus = (it?.get("attributes") as? JSONObject)?.get("lock_status").toString()
+            // replace the stupidly long manually locked by cylinder turn or ... message
+            if (lockStatus.contains("Manually Locked")) {
+                front_door_lock_status.text = "Lock Status: Manually Locked"
+            } else {
+                front_door_lock_status.text = "Lock Status: ${lockStatus}"
+            }
         }
     }
 }
